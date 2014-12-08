@@ -1,0 +1,38 @@
+// Rushy Panchal
+// mandelbrot.scss
+
+// Variables
+$base-h-size: 24px;
+
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,300");
+@import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css");
+
+body, div, section, span, input, p, a {
+	 font-family: 'Open Sans', sans-serif;
+	 text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
+	 -webkit-font-smoothing: antialiased !important;
+	 color: inherit;
+	 line-height: inherit;
+	}
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+	@extend span;
+	font-weight: 300;
+	}
+
+@for $i from 1 through 6 {
+	h#{$i}, .h#{$i}  {
+		font-size: $base-h-size - (($i - 1) * 2);
+		}
+	}
+
+.center {
+	margin-right: auto;
+	margin-left: auto;
+	text-align: center;
+	}
+
+.mandelbrot {
+	width: 100%;
+	height: 100vh;
+	}
